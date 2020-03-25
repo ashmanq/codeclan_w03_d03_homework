@@ -57,4 +57,12 @@ class Artist
     return albums_hash.map {|album| Album.new(album)}
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM artists WHERE id = $1"
+    values = [id]
+    result_hash = SqlRunner.run(sql, values).first()
+    return nil if result_hash == nil
+    return Artist.new(result_hash)
+  end
+
 end
