@@ -25,6 +25,14 @@ class Artist
     @id = SqlRunner.run(sql, values)[0]['id'].to_i
   end
 
+  def update()
+    sql = "UPDATE artists SET
+            name = $1
+            WHERE id = $2"
+    values = [@name, @id]
+    SqlRunner.run(sql, values)
+  end
+
   def self.all()
     sql = "SELECT * FROM artists"
     artists_hash = SqlRunner.run(sql, [])
