@@ -12,6 +12,10 @@ artist2.save()
 artist2.name = "Billie Eilish"
 artist2.update()
 
+artist3 = Artist.new({'name' => 'Jimmy Jo'})
+artist3.save()
+artist3.delete()
+
 album1 = Album.new({'title' => "Discovery",
                       'genre' => "EDM",
                       'artist_id' => artist1.id})
