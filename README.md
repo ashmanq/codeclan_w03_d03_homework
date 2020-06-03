@@ -9,3 +9,9 @@ An app demonstrating manipulation of an SQL database. The task was to carry out 
 * Edit Artists/Albums
 * Delete Artists/Albums
 * Find Artists/Albums by their ID
+
+# Run App
+To run the app use the following command in terminal:
+```Ruby
+ruby db/console.rb
+```
